@@ -1,0 +1,16 @@
+<div class="myStack">
+    <a class="anchor" id="stack"></a>
+      <div class="myStack__title">
+          <h3>My Stack</h3>
+      </div>
+      <div class="myStack__list">
+        <span class="border-effect"></span>
+        <span class="border-effect"></span>
+        <span class="border-effect"></span>
+        <span class="border-effect"></span>
+        <div class="myStack-list__item" *ngFor="let stackItem of stackList">
+            <div class="myStack-list__item__caption">{{stackItem.name}}</div>
+            <img src="/assets/imgs/stackIcons/{{stackItem.img}}" [alt]="stackItem.name" class="stackIcon">
+        </div>
+      </div>
+  </div>

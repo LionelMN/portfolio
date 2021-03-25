@@ -1,0 +1,35 @@
+.header{
+    height: 100vh;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 95% 5%;
+    background: url('/assets/imgs/bground.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    background-position: fixed;
+}
+
+.header__text{
+    align-self: center;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+.header__arrow{
+    align-self: start;
+}
+
+.arrow {
+    opacity: 0.8;
+    animation: animate 1s alternate infinite;
+    cursor: pointer;
+}
+
+@keyframes animate {
+    0%{
+        transform: translateY(0);
+      }
+
+      100% {
+        transform: translateY(10px);
+      }
+}

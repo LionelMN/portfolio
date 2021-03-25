@@ -1,1 +1,79 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --primary-textColor: #e7e7de;
+    --primary-bgColor: #020b13;
+    --secondary-bgColor: #008891;
+    --terciary-bgColor: #00587a;
+    --before-cardColor:  rgba(231, 231, 222, 0.1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--primary-textColor);
+    background: var(--primary-bgColor);
+    font-family: 'Roboto'
+}
+
+
+h1,h2,h3,h4,h5 {
+    font-family: 'Archivo Black'
+}
+
+h3{
+    border-bottom: 1px solid var(--primary-textColor);
+    width: 95vw;
+    text-align: center;
+    margin: 0;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -20px;
+    visibility: hidden;
+}
+
+@keyframes animate1 {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+@keyframes animate2 {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+
+@keyframes animate3 {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animate4 {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}

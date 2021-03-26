@@ -33,3 +33,21 @@
         transform: translateY(10px);
       }
 }
+
+@media only screen and (max-width: 950px){
+  .header {
+    background-size: cover;
+    background-position: center;
+    grid-template-rows: 98% 2%;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .header__text{
+    margin: 0 1rem;
+  }
+
+  .header__arrow{
+      align-self: end;
+  }
+}

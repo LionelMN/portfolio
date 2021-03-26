@@ -1,0 +1,32 @@
+<div class="myWorks">
+  <a class="anchor" id="works"></a>
+    <div class="myWorks__title">
+        <h3>My Works</h3>
+    </div>
+    <div class="myWorks__list">
+        <div class="myWorks__card" *ngFor="let work of worksList">
+          <span class="border-effect"></span>
+          <span class="border-effect"></span>
+          <span class="border-effect"></span>
+          <span class="border-effect"></span>
+          <div class="card__content">
+              <h2>{{work.id}}</h2>
+              <div class="card__title">
+                  <h4>{{work.title}}</h4>
+              </div>
+              <div class="card__description">
+                  <p>{{work.previewInfo}}</p>
+              </div>
+              <div class="card__links">
+                  <a [href]="work.repository1" target="_blank" *ngIf="work.repository1">Front Repository</a>
+                  <a [href]="work.repository2" target="_blank" *ngIf="work.repository2">Back Repository</a>
+                  <a [href]="work.repository3" target="_blank" *ngIf="work.repository3">Back Repository</a>
+                  <a [href]="work.url" target="_blank" *ngIf="work.url">Let's see the site</a>
+              </div>
+              <div class="card__container-img" action="Click to see more">
+                  <a class="toFullWork" (click)="onSendWork(work)" href="#work">Click to see more</a>
+              </div>
+          </div>
+      </div>
+    </div>
+</div>

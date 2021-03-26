@@ -1,0 +1,10 @@
+/***************FOOTER*************/
+.footer{
+  background: #000;
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+}

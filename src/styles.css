@@ -77,3 +77,12 @@ a.anchor {
         transform: translateY(-100%);
     }
 }
+
+@media only screen and (max-width: 768px){
+  a.anchor {
+    display: block;
+    position: relative;
+    top: -60px;
+    visibility: hidden;
+  }
+}

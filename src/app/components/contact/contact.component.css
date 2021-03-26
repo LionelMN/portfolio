@@ -1,0 +1,346 @@
+.contact{
+  margin: 10px 0 10px 0;
+  display: grid;
+  grid-template-rows: 1.5rem;
+  row-gap: 1rem;
+}
+
+.contact__title {
+  justify-self: center;
+}
+
+
+/*****************FORM*************************/
+.contact__form {
+  position: relative;
+  justify-self: center;
+  text-align: center;
+  width: 80%;
+  background: var(--terciary-bgColor);
+  overflow: hidden;
+}
+
+.contact__form::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  width: 50%;
+  background: var(--before-cardColor);
+  z-index: 0;
+}
+
+.contact__form form{
+  display: grid;
+  justify-content: center;
+  margin: 0 auto;
+  row-gap: 1rem;
+  width: 80%;
+  grid-template-columns: 80%;
+}
+
+.contact-form__input {
+  padding: 0.5rem;
+  outline: none;
+  z-index: 1;
+  border-radius: 5px;
+  border: none;
+}
+
+.contact__form form textarea {
+  width: 99%;
+  min-width: 99%;
+  max-width: 99%;
+  height: 3rem;
+  min-height: 1.5rem;
+  max-height: 4rem;
+}
+
+.contact-form__button{
+  margin-bottom: 1rem;
+  width: 25%;
+  justify-self: center;
+  cursor: pointer;
+  z-index: 1;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  height: 1.5rem;
+  padding: 0 auto;
+}
+
+.contact-form__errors{
+  margin-bottom: 1rem;
+}
+
+.contact__form .border-effect {
+  transition: 0.5;
+  opacity: 0;
+}
+
+.contact__form:hover .border-effect {
+  opacity: 1;
+  background: red;
+  height: 100%;
+}
+
+.contact__form .border-effect:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, transparent, var(--primary-textColor));
+  animation: animate1 2s linear infinite;
+}
+
+.contact__form .border-effect:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 3px;
+  background: linear-gradient(to bottom, transparent, var(--primary-textColor));
+  animation: animate2 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.contact__form .border-effect:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to left, transparent, var(--primary-textColor));
+  animation: animate3 2s linear infinite;
+  animation-delay: 2s;
+}
+
+.contact__form .border-effect:nth-child(4) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background: linear-gradient(to top, transparent, var(--primary-textColor));
+  animation: animate4 2s linear infinite;
+  animation-delay: 3s;
+}
+
+/**********************************************/
+
+/*************SOCIAL MEDIA ACCORDION***********/
+ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+@font-face {
+  font-family: 'Genericons';
+  src: url('/assets/genericons/genericons-regular-webfont.woff')format('woff'),
+      url('/assets/genericons/genericons-regular-webfont.eot')format('truetype')
+}
+
+.otherContacts {
+  margin: 0px auto;
+  width: 100%;
+}
+
+.otherContacts h4 {
+  color: var(--primary-textColor);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.accordion {
+  background: #333;
+  margin: auto;
+  width: 80%;
+  min-width: 800px;
+  display: block;
+  overflow: hidden;
+  height: 200px;
+  font-size: 0;
+}
+
+.tab {
+  display: inline-block;
+  background: #444;
+  border-right: #333 solid 1px;
+  width: 80px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  transition: all 0.5s ease-in-out 0.1s;
+}
+
+.tab:hover {
+  width: 450px;
+}
+
+.tab:hover .social a:before {
+  margin-left: -100px;
+}
+
+.tab:hover .social a:after {
+  margin-left: -5px;
+}
+
+.tab .content {
+  color: black;
+  background: var(--primary-textColor);
+  width: 360px;
+  height: 200px;
+  margin-left: 80px;
+  position: relative;
+  padding: 50px 0 0 15px ;
+}
+
+.tab .content h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.tab .content p {
+  font-size: 0.85rem;
+  line-height: 1.4rem;
+  padding-right: 30px;
+}
+
+.social a:before,
+.social a:after {
+  transition: all 0.4s ease-in-out 0.1s;
+  width: 80px;
+  height: 200px;
+  position: absolute;
+  text-indent: 0;
+  padding-top: 90px;
+  padding-left: 25px;
+  display: block;
+  font: normal 30px Genericons;
+  color: var(--primary-textColor);
+}
+
+.social a:after {
+  font-size: 48px;
+  padding-left: 20px;
+  padding-top: 80px;
+  margin-left: 85px;
+}
+
+/* Icons */
+.linkedin a:before,
+.linkedin a:after {
+  content:  '\f208'
+}
+
+.linkedin a:after {
+  background: #00a9cd;
+}
+
+.github a:before,
+.github a:after {
+  content:  '\f200'
+}
+
+.github a:after {
+  background: #6e5494;
+}
+
+.twitter a:before,
+.twitter a:after {
+  content:  '\f202'
+}
+
+.twitter a:after {
+  background: #6dc5dd;
+}
+
+@media only screen and (max-width: 950px){
+  .otherContacts {
+    width: 80%;
+  }
+
+  .tab {
+      display: block;
+      width: 100%;
+      border-bottom: 3px #333 solid;
+  }
+
+  .tab .content {
+    width: 85%;
+  }
+
+  .tab:hover {
+      width: 100%;
+  }
+
+  .accordion {
+      display: block;
+      min-width: 450px;
+      height: auto;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .contact__form {
+    padding: 0 1rem;
+    width: 70%;
+}
+
+.legend {
+    justify-self: start;
+}
+
+.contact__form form textarea{
+    width: 92%;
+    min-width: 92%;
+    max-width: 92%;
+}
+
+.contact__form form {
+    row-gap: 0;
+}
+
+.contact-form__input {
+    margin-bottom: 1rem;
+}
+
+.contact-form__button {
+    width: auto;
+}
+
+
+/*************************************ACCORDION***********************************************/
+.otherContacts {
+    width: 100%;
+}
+
+.tab {
+    display: block;
+    width: 100%;
+    border-bottom: 3px #333 solid;
+}
+
+.tab .content {
+    width: 85%;
+}
+
+.tab:hover {
+    width: 100%;
+}
+
+.accordion {
+    width: 80%;
+    min-width: 350px;
+    margin: auto;
+}
+
+.tab .content p {
+    width: 80%;
+    padding: 0;
+}
+}

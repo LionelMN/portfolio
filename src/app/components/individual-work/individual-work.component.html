@@ -1,0 +1,22 @@
+<div class="work">
+  <a class="anchor" id="work"></a>
+  <div class="work__title">
+      <h3>{{workRecived.title}}</h3>
+  </div>
+  <div class="work__container">
+    <span class="border-effect"></span>
+    <span class="border-effect"></span>
+    <span class="border-effect"></span>
+    <span class="border-effect"></span>
+    <div class="work__content">
+      <div class="work__description">
+        <p>{{workRecived.info}}</p>
+      </div>
+      <div class="work__imgs">
+        <img *ngFor="let img of workRecived.imgs" src="/assets/imgs/{{img}}.PNG" class="img" [alt]="img" (click)=selectImg(img)>
+      </div>
+    </div>
+  </div>
+  <img *ngIf="selectedImg" src="/assets/imgs/{{selectedImg}}.PNG" class="img-fullView" [alt]="selectedImg">
+</div>
+

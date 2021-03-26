@@ -9,8 +9,7 @@
     <span class="border-effect"></span>
     <span class="border-effect"></span>
     <div class="work__content">
-      <div class="work__description">
-        <p>{{workRecived.info}}</p>
+      <div class="work__description" [innerHTML]='workRecived.info'>
       </div>
       <div class="work__imgs">
         <img *ngFor="let img of workRecived.imgs" src="/assets/imgs/{{img}}.PNG" class="img" [alt]="img" (click)=selectImg(img)>

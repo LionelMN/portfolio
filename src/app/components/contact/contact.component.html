@@ -3,54 +3,28 @@
   <div class="contact__title">
       <h3>Contact Me</h3>
   </div>
-  <div class="contact__form">
-    <span class="border-effect"></span>
-    <span class="border-effect"></span>
-    <span class="border-effect"></span>
-    <span class="border-effect"></span>
-    <h4>Send me an email</h4>
-    <p>It's important to put an email address and a subject.</p>
-    <form name="form">
-      <legend class="legend">Your email: </legend>
-      <input type="email" class="contact-form__input" placeholder="Your email" name="email">
-      <legend class="legend">Subject: </legend>
-      <input type="text" class="contact-form__input" placeholder="Subject" name="subject">
-      <legend class="legend">Body: </legend>
-      <textarea type="text" class="contact-form__input" placeholder="Tell me something..." name="body"></textarea>
-      <input type="button" value="Contact!" class="contact-form__button" onclick="return validate()">
-    </form>
-    <div class="contact-form__errors" id="contact-form__errors"></div>
-  </div>
   <div class="otherContacts">
-    <h4>You also can find me on this sites</h4>
     <div class="otherContacts__links">
       <ul class="accordion">
-        <li class="tab">
-          <div class="social linkedin">
-            <a href="https://www.linkedin.com/in/lionel-montesdeoca-nuez/" target="_blank">Linkedin</a>
-          </div>
-          <div class="content">
-            <h1>Linkedin</h1>
-            <p>Connect with me on a professional level on Linkedin</p>
-          </div>
-        </li>
-        <li class="tab">
-          <div class="social github">
-            <a href="https://github.com/LionelMN" target="_blank">Github</a>
-          </div>
-          <div class="content">
-            <h1>Github</h1>
-            <p>Check out my Github for my personal projects</p>
-          </div>
-        </li>
-        <li class="tab">
-          <div class="social twitter">
-            <a href="https://twitter.com/NuezLionel" target="_blank">Twitter</a>
-          </div>
-          <div class="content">
-            <h1>Twitter</h1>
-            <p>Connect with me on a personal level on Twitter</p>
-          </div>
+        <li class="tab" *ngFor="let network of socialLinks">
+          <a [href]="network.url" target="_blank" *ngIf="network.socialNetwork!=='gmail'">
+            <div class="social {{network.socialNetwork}}">
+              <a [href]="network.url" target="_blank" *ngIf="network.socialNetwork!=='gmail'">{{network.socialNetwork}}</a>
+            </div>
+            <div class="content">
+              <h1>{{network.socialNetwork}}</h1>
+              <p>{{network.description}}</p>
+            </div>
+          </a>
+          <a href="mailto:{{network.url}}" target="_blank" *ngIf="network.socialNetwork==='gmail'">{{network.socialNetwork}}
+            <div class="social {{network.socialNetwork}}">
+              <a href="mailto:{{network.url}}" target="_blank" *ngIf="network.socialNetwork==='gmail'">{{network.socialNetwork}}</a>
+            </div>
+            <div class="content">
+              <h1>{{network.socialNetwork}}</h1>
+              <p>{{network.description}}</p>
+            </div>
+          </a>
         </li>
       </ul>
     </div>

@@ -1,10 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation  } from '@angular/core';
 import { WorksI } from '../../interfaces/works-i';
 
 @Component({
   selector: 'app-individual-work',
   templateUrl: './individual-work.component.html',
-  styleUrls: ['./individual-work.component.css']
+  styleUrls: ['./individual-work.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class IndividualWorkComponent implements OnInit {
 
@@ -20,6 +21,10 @@ export class IndividualWorkComponent implements OnInit {
 
   selectImg(img : string) :void{
     this.selectedImg = img;
+  }
+
+  desSelectImg() : void{
+    this.selectedImg = ""
   }
 
 }

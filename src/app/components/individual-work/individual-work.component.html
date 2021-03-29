@@ -12,10 +12,14 @@
       <div class="work__description" [innerHTML]='workRecived.info'>
       </div>
       <div class="work__imgs">
-        <img *ngFor="let img of workRecived.imgs" src="/assets/imgs/{{img}}.PNG" class="img" [alt]="img" (click)=selectImg(img)>
+        <img *ngFor="let img of workRecived.imgs" src="/assets/imgs/{{img}}" class="img" [alt]="img" (click)=selectImg(img)>
       </div>
+      <p>Click on an image to see it better</p>
     </div>
   </div>
-  <img *ngIf="selectedImg" src="/assets/imgs/{{selectedImg}}.PNG" class="img-fullView" [alt]="selectedImg">
+  <div class="fullView" *ngIf="selectedImg">
+    <h5 (click)="desSelectImg()">X</h5>
+    <img src="/assets/imgs/{{selectedImg}}" class="img-fullView" [alt]="selectedImg">
+  </div>
 </div>
 

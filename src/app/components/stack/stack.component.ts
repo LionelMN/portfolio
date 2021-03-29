@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Stack } from '../../interfaces/stack';
 
 @Component({
   selector: 'app-stack',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StackComponent implements OnInit {
 
-  stackList : {name:string, img:string}[] = [
+  stackList : Stack[] = [
     {name:"HTML5",img:"html5.svg"},
     {name:"CSS3",img:"css3.svg"},
     {name:"EC6",img:"logo-javascript.svg"},
@@ -26,6 +27,7 @@ export class StackComponent implements OnInit {
     {name:"Bash",img:"bash-1.svg"},
     {name:"Git",img:"git-icon.svg"},
     {name:"Docker",img:"docker.svg"},
+    {name:"Wordpress",img:"wordpress-icon.svg"},
   ]
 
   test = "test"

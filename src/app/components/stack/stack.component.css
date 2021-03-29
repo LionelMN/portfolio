@@ -116,3 +116,9 @@
     animation: animate4 2s linear infinite;
     animation-delay: 3s;
 }
+
+@media only screen and (max-width: 480px){
+  .myStack-list__item__caption{
+    font-size: 60%;
+  }
+}

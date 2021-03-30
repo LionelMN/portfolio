@@ -12,9 +12,10 @@ export class WorksComponent implements OnInit {
     {
       id: 1,
       title: 'MEAN To do list',
-      previewInfo: 'Responsive multiuser to do list built with MongoDB, Express, Angular and Node. Designed and developed by me',
+      previewInfo: 'Responsive multiuser to do list built with the MEAN Stack. Designed and developed by me',
       repository1:'https://github.com/LionelMN/todolist-angular',
       repository2:'https://github.com/LionelMN/todolist-back',
+      info: '<p>A responsive multiuser to do list built with MongoDB, Express, Angular and Node. This project was made by myself.</p>',
       imgs:[
         'todolist.PNG',
         'register.PNG',
@@ -35,6 +36,18 @@ export class WorksComponent implements OnInit {
         'dev-des-home.PNG'
       ]
     },
+    {
+      id: 3,
+      title: 'Rodasorio',
+      previewInfo: 'The webpage of Rodasorio S.L. Made it with WordPress.',
+      url: 'https://www.rodasorio.com',
+      info: '<p>The webpage of Rodasorio S.L. Made it with WordPress.</p>',
+      imgs: [
+        'rodasorioHome.PNG',
+        'rodasorioFormacion.PNG',
+        'rodasorioCatering.PNG',
+      ]
+    }
   ]
 
   @Output()

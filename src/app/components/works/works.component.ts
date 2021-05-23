@@ -47,7 +47,30 @@ export class WorksComponent implements OnInit {
         'rodasorioFormacion.PNG',
         'rodasorioCatering.PNG',
       ]
-    }
+    },
+    {
+      id: 4,
+      title: 'PokeApi',
+      previewInfo: 'An interface of the Pokemon Api made with Angular',
+      repository1: 'https://github.com/LionelMN/pokeApi',
+      info: '<p>An interface of the <a href="https://pokeapi.co/" target="_blank">PokeApi</a>.Made it with Angular.</p>',
+      imgs: [
+        'pokeapiPokeList.PNG',
+        'pokeapiPokemon.PNG',
+        'pokeapiItemList.PNG',
+        'pokeapiItem.PNG',
+      ]
+    },
+    {
+      id: 5,
+      title: 'DigiApi',
+      previewInfo: 'An interface of the Digimon Api made with React',
+      repository1: 'https://github.com/LionelMN/digiApi',
+      info: '<p>An interface of the <a href="https://digimon-api.vercel.app//" target="_blank">digimon-api</a>.Made it with React.</p>',
+      imgs: [
+        'digiapiList.PNG',
+      ]
+    },
   ]
 
   @Output()

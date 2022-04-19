@@ -3,10 +3,6 @@
     text-align: center;
     display: grid;
     grid-template-rows: 95% 5%;
-    background: url('/assets/imgs/bground.jpeg');
-    background-repeat: no-repeat;
-    background-size: 100vw 100vh;
-    background-position: fixed;
 }
 
 .header__text{

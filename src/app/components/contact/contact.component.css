@@ -18,8 +18,8 @@ ul {
 
 @font-face {
   font-family: 'Genericons';
-  src: url('/assets/genericons/genericons-regular-webfont.woff')format('woff'),
-      url('/assets/genericons/genericons-regular-webfont.eot')format('truetype')
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/genericons/3.1/Genericons.woff")format('woff'),
+      url("https://cdnjs.cloudflare.com/ajax/libs/genericons/3.1/Genericons.eot")format('truetype')
 }
 
 .otherContacts {

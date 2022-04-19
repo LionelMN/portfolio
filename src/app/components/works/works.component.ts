@@ -53,6 +53,7 @@ export class WorksComponent implements OnInit {
       title: 'PokeApi',
       previewInfo: 'An interface of the Pokemon Api made with Angular',
       repository1: 'https://github.com/LionelMN/pokeApi',
+      url: 'https://lionelmn.github.io/pokeApi/pokemon',
       info: '<p>An interface of the <a href="https://pokeapi.co/" target="_blank">PokeApi</a>.Made it with Angular.</p>',
       imgs: [
         'pokeapiPokeList.PNG',
@@ -71,6 +72,17 @@ export class WorksComponent implements OnInit {
         'digiapiList.PNG',
       ]
     },
+    {
+      id: 6,
+      title: 'React Gif App',
+      previewInfo: 'A React aoo that uses the Giphy API to search gifs',
+      repository1: 'https://github.com/LionelMN/React-Gif-App',
+      url: 'https://lionelmn.github.io/React-Gif-App/',
+      info: '<p>A React aoo that uses the <a href="https://giphy.com" target="_blank">Giphy API</a> to search gifs</p>',
+      imgs:[
+        'gifApp.PNG'
+      ]
+    }
   ]
 
   @Output()

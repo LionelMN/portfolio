@@ -14,6 +14,7 @@ export class StackComponent implements OnInit {
     {name:"EC6",img:"logo-javascript.svg"},
     {name:"TypeScript",img:"typescript.svg"},
     {name:"Angular 9",img:"angular-icon-1.svg"},
+    {name:"React 18", img:"react.svg"},
     {name:"Node.js",img:"nodejs-1.svg"},
     {name:"Express",img:"express-109.svg"},
     {name:"PHP",img:"php-1.svg"},
